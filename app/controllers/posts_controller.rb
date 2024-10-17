@@ -8,7 +8,7 @@ class PostsController < ApplicationController
 
   def create
     post = Post.create(content: params[:content])
-    redirect_to action: :index
+    render json:{ post: post }
     # レスポンスでindex.html.erbを返すように指定しているのは
     #posts_controller.rbのcreateアクション
   end
