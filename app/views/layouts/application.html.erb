@@ -11,6 +11,10 @@
   </head>
 
   <body>
+    <%= form_with url: "/posts", method: :post, id: "form" do |form| %>
+      <!-- フォームの内容をここに -->
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
